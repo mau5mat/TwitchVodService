@@ -1,0 +1,6 @@
+framework module Pods_TwitchStream {
+  umbrella header "Pods-TwitchStream-umbrella.h"
+
+  export *
+  module * { export * }
+}

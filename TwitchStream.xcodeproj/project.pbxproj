@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F050D0220864CB20099A266 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F050D0120864CB20099A266 /* AppDelegate.swift */; };
+		9F050D0720864CB20099A266 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F050D0520864CB20099A266 /* Main.storyboard */; };
+		9F050D0920864CB40099A266 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F050D0820864CB40099A266 /* Assets.xcassets */; };
+		9F050D0C20864CB40099A266 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F050D0A20864CB40099A266 /* LaunchScreen.storyboard */; };
+		9F050D1520864DB00099A266 /* TwitchWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F050D1420864DB00099A266 /* TwitchWebService.swift */; };
+		9F050D17208789F70099A266 /* LoadingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F050D16208789F70099A266 /* LoadingControl.swift */; };
+		9F050D192088ED3F0099A266 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F050D182088ED3F0099A266 /* PlayerTableViewController.swift */; };
+		9F050D1B2088ED8B0099A266 /* PlayerVodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F050D1A2088ED8B0099A266 /* PlayerVodTableViewController.swift */; };
+		9FE277BE2089F36B008ED6EE /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE277BD2089F36B008ED6EE /* SplashViewController.swift */; };
+		D99D97EEC70A2BB4DAA5305F /* Pods_TwitchStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720AE25ABD2A3E16EC93EA24 /* Pods_TwitchStream.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2851054BA18E92ABCA7AE334 /* Pods-TwitchStream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitchStream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitchStream/Pods-TwitchStream.debug.xcconfig"; sourceTree = "<group>"; };
+		720AE25ABD2A3E16EC93EA24 /* Pods_TwitchStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitchStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78F49A0D05580AC6DF08CB71 /* Pods-TwitchStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitchStream.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitchStream/Pods-TwitchStream.release.xcconfig"; sourceTree = "<group>"; };
+		9F050CFE20864CB20099A266 /* TwitchStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitchStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F050D0120864CB20099A266 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F050D0620864CB20099A266 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F050D0820864CB40099A266 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F050D0B20864CB40099A266 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F050D0D20864CB40099A266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F050D1420864DB00099A266 /* TwitchWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchWebService.swift; sourceTree = "<group>"; };
+		9F050D16208789F70099A266 /* LoadingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingControl.swift; sourceTree = "<group>"; };
+		9F050D182088ED3F0099A266 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
+		9F050D1A2088ED8B0099A266 /* PlayerVodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVodTableViewController.swift; sourceTree = "<group>"; };
+		9FE277BD2089F36B008ED6EE /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F050CFB20864CB20099A266 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D99D97EEC70A2BB4DAA5305F /* Pods_TwitchStream.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A0A65356C35A781D42EAFD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				720AE25ABD2A3E16EC93EA24 /* Pods_TwitchStream.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		754436F9A69442ECF3995D3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2851054BA18E92ABCA7AE334 /* Pods-TwitchStream.debug.xcconfig */,
+				78F49A0D05580AC6DF08CB71 /* Pods-TwitchStream.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9F050CF520864CB20099A266 = {
+			isa = PBXGroup;
+			children = (
+				9F050D0020864CB20099A266 /* TwitchStream */,
+				9F050CFF20864CB20099A266 /* Products */,
+				754436F9A69442ECF3995D3D /* Pods */,
+				1A0A65356C35A781D42EAFD6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9F050CFF20864CB20099A266 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F050CFE20864CB20099A266 /* TwitchStream.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F050D0020864CB20099A266 /* TwitchStream */ = {
+			isa = PBXGroup;
+			children = (
+				9F050D1320864D990099A266 /* Services */,
+				9F050D0120864CB20099A266 /* AppDelegate.swift */,
+				9F050D16208789F70099A266 /* LoadingControl.swift */,
+				9F050D182088ED3F0099A266 /* PlayerTableViewController.swift */,
+				9F050D1A2088ED8B0099A266 /* PlayerVodTableViewController.swift */,
+				9FE277BD2089F36B008ED6EE /* SplashViewController.swift */,
+				9F050D0520864CB20099A266 /* Main.storyboard */,
+				9F050D0820864CB40099A266 /* Assets.xcassets */,
+				9F050D0A20864CB40099A266 /* LaunchScreen.storyboard */,
+				9F050D0D20864CB40099A266 /* Info.plist */,
+			);
+			path = TwitchStream;
+			sourceTree = "<group>";
+		};
+		9F050D1320864D990099A266 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9F050D1420864DB00099A266 /* TwitchWebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F050CFD20864CB20099A266 /* TwitchStream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F050D1020864CB40099A266 /* Build configuration list for PBXNativeTarget "TwitchStream" */;
+			buildPhases = (
+				DE4F0BBEE0D9F940033E0FE5 /* [CP] Check Pods Manifest.lock */,
+				9F050CFA20864CB20099A266 /* Sources */,
+				9F050CFB20864CB20099A266 /* Frameworks */,
+				9F050CFC20864CB20099A266 /* Resources */,
+				8812669EF73D4FD949E158F9 /* [CP] Embed Pods Frameworks */,
+				1530DB9A1192866248E8584F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwitchStream;
+			productName = TwitchStream;
+			productReference = 9F050CFE20864CB20099A266 /* TwitchStream.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F050CF620864CB20099A266 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Matt Roberts";
+				TargetAttributes = {
+					9F050CFD20864CB20099A266 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 9F050CF920864CB20099A266 /* Build configuration list for PBXProject "TwitchStream" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F050CF520864CB20099A266;
+			productRefGroup = 9F050CFF20864CB20099A266 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F050CFD20864CB20099A266 /* TwitchStream */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F050CFC20864CB20099A266 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F050D0C20864CB40099A266 /* LaunchScreen.storyboard in Resources */,
+				9F050D0920864CB40099A266 /* Assets.xcassets in Resources */,
+				9F050D0720864CB20099A266 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1530DB9A1192866248E8584F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwitchStream/Pods-TwitchStream-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8812669EF73D4FD949E158F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TwitchStream/Pods-TwitchStream-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwitchStream/Pods-TwitchStream-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE4F0BBEE0D9F940033E0FE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TwitchStream-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F050CFA20864CB20099A266 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F050D1B2088ED8B0099A266 /* PlayerVodTableViewController.swift in Sources */,
+				9F050D192088ED3F0099A266 /* PlayerTableViewController.swift in Sources */,
+				9F050D1520864DB00099A266 /* TwitchWebService.swift in Sources */,
+				9F050D17208789F70099A266 /* LoadingControl.swift in Sources */,
+				9FE277BE2089F36B008ED6EE /* SplashViewController.swift in Sources */,
+				9F050D0220864CB20099A266 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9F050D0520864CB20099A266 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F050D0620864CB20099A266 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F050D0A20864CB40099A266 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F050D0B20864CB40099A266 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F050D0E20864CB40099A266 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F050D0F20864CB40099A266 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F050D1120864CB40099A266 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2851054BA18E92ABCA7AE334 /* Pods-TwitchStream.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TwitchStream/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mau5mat.TwitchStream;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F050D1220864CB40099A266 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78F49A0D05580AC6DF08CB71 /* Pods-TwitchStream.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TwitchStream/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mau5mat.TwitchStream;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F050CF920864CB20099A266 /* Build configuration list for PBXProject "TwitchStream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F050D0E20864CB40099A266 /* Debug */,
+				9F050D0F20864CB40099A266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F050D1020864CB40099A266 /* Build configuration list for PBXNativeTarget "TwitchStream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F050D1120864CB40099A266 /* Debug */,
+				9F050D1220864CB40099A266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F050CF620864CB20099A266 /* Project object */;
+}
