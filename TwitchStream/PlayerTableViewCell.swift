@@ -15,6 +15,12 @@ class PlayerTableViewCell: UITableViewCell {
   @IBOutlet weak var countryFlag: UIImageView!
   @IBOutlet weak var streamName: UILabel!
   @IBOutlet weak var streamTwitch: UILabel!
+  
+  func set(player: Player) {
+    self.countryFlag.image = player.flag
+    self.streamName.text = player.name
+    self.streamTwitch.text = player.twitch
+  }
 
     override func awakeFromNib() {
         super.awakeFromNib()

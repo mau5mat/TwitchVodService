@@ -10,14 +10,16 @@ import UIKit
 
 struct Player {
   
-  let flag: UIImage
+  let flag: UIImage?
   let name: String
   let twitch: String
+  let userID: String
   
-  init!(flag: UIImage, name: String, twitch: String) {
+  init(flag: UIImage?, name: String, twitch: String, userID: String) {
     self.flag = flag
     self.name = name
     self.twitch = twitch
+    self.userID = userID
   }
 }
 

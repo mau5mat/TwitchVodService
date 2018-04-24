@@ -10,4 +10,11 @@ import UIKit
 
 class PlayerVodTableViewController: UITableViewController {
   
+  static func present(from viewController: UIViewController, withPlayer player: Player) {
+    
+    if let playerVodTableViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PlayerVodTableViewController") as? PlayerVodTableViewController {
+      viewController.present(playerVodTableViewController, animated: true, completion: nil)
+      
+    }
+  }
 }
