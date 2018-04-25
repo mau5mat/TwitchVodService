@@ -10,11 +10,25 @@ import UIKit
 
 class PlayerVodTableViewController: UITableViewController {
   
-  static func present(from viewController: UIViewController, withPlayer player: Player) {
+  var player: Player?
+  private let webService = TwitchWebService()
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    if let player = self.player {
+      self.webService.requestPlayerVOD(withPlayer: player)
+    }
+  }
+  
+  static func push(from navigationController: UINavigationController, withPlayer player: Player) {
     
-    if let playerVodTableViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PlayerVodTableViewController") as? PlayerVodTableViewController {
-      viewController.present(playerVodTableViewController, animated: true, completion: nil)
-      
+    if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PlayerVodTableViewController") as? PlayerVodTableViewController {
+      viewController.player = player
+      navigationController.pushViewController(viewController, animated: true)
     }
   }
 }
