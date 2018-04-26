@@ -9,9 +9,18 @@
 import Foundation
 import Alamofire
 
-class TwitchWebService {
+
+protocol TwitchWebServiceProtocol {
+  func twitchWebService(_ webService: TwitchWebService, recievedVODs VODs:[Vod])
   
-  private let tekkenGameID = 461067
+}
+
+
+class TwitchWebService {
+  // need?
+  // private let tekkenGameID = 461067
+  
+  var delegate: TwitchWebServiceProtocol?
   
   func requestPlayerVOD(withPlayer player: Player) {
     let URL = "https://api.twitch.tv/helix/videos?user_id=\(player.userID)&sort=time&type=archive"
@@ -26,32 +35,37 @@ class TwitchWebService {
       encoding: JSONEncoding.default,
       headers: header)
       .validate()
-      .responseJSON { (response) -> Void in
-        guard response.result.isSuccess else {
-          print("Error while fetching data for \(player.name)")
-          
-          return
-        }
-        print(response)
-        
+      .responseJSON { (response) in print("response = \(response)")
         switch response.result {
         case .success(let value):
           if let value = value as? [String: AnyObject], let dataVodArray = value["data"] as? [[String: AnyObject]] {
-            // var vods = [VOD]()
+            var vods = [Vod]()
+            
             for dataVod in dataVodArray {
               // parsing
-              if let url = dataVod["url"] as? String {
+            // testing purposes print(dataVod["id"] as? String)
+              
+              if let blobID = dataVod["id"] as? String,
+                let blobUserID = dataVod["user_id"] as? String,
+                let blobThumb = dataVod["thumbnail_url"] as? String,
+                let blobURL = dataVod["url"] as? String
+                /* let blobViewCount = dataVod["view_count"] as? Int */ {
+ 
+                let vodObj = Vod(id: blobID, userID: blobUserID, thumbNailURL: blobThumb, url: blobURL, viewCount: "420")
                 
+                vods.append(vodObj)
+                // make Vod object with the above variables and then add object to vods[]
               }
             }
-            //self.delegate?
+            self.delegate?.twitchWebService(self, recievedVODs: vods)
           }
           break
         case .failure(let error):
-          break
+          print("Error result: \(error)")
+          return
         }
         
-
+        
     }
   }
   

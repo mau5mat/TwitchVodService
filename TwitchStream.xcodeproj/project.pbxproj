@@ -18,6 +18,7 @@
 		9FE277BE2089F36B008ED6EE /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE277BD2089F36B008ED6EE /* SplashViewController.swift */; };
 		9FE277C0208E1F34008ED6EE /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE277BF208E1F34008ED6EE /* PlayerTableViewCell.swift */; };
 		9FE277C2208E25BD008ED6EE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE277C1208E25BD008ED6EE /* Player.swift */; };
+		9FE277CA2090D1DD008ED6EE /* Vod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE277C92090D1DD008ED6EE /* Vod.swift */; };
 		D99D97EEC70A2BB4DAA5305F /* Pods_TwitchStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720AE25ABD2A3E16EC93EA24 /* Pods_TwitchStream.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		9FE277BD2089F36B008ED6EE /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		9FE277BF208E1F34008ED6EE /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		9FE277C1208E25BD008ED6EE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		9FE277C92090D1DD008ED6EE /* Vod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +95,12 @@
 				9F050D1320864D990099A266 /* Services */,
 				9F050D0120864CB20099A266 /* AppDelegate.swift */,
 				9F050D16208789F70099A266 /* LoadingControl.swift */,
-				9FE277BF208E1F34008ED6EE /* PlayerTableViewCell.swift */,
-				9FE277C1208E25BD008ED6EE /* Player.swift */,
-				9F050D182088ED3F0099A266 /* PlayerTableViewController.swift */,
-				9F050D1A2088ED8B0099A266 /* PlayerVodTableViewController.swift */,
 				9FE277BD2089F36B008ED6EE /* SplashViewController.swift */,
+				9FE277C1208E25BD008ED6EE /* Player.swift */,
+				9FE277BF208E1F34008ED6EE /* PlayerTableViewCell.swift */,
+				9F050D182088ED3F0099A266 /* PlayerTableViewController.swift */,
+				9FE277C92090D1DD008ED6EE /* Vod.swift */,
+				9F050D1A2088ED8B0099A266 /* PlayerVodTableViewController.swift */,
 				9F050D0520864CB20099A266 /* Main.storyboard */,
 				9F050D0820864CB40099A266 /* Assets.xcassets */,
 				9F050D0A20864CB40099A266 /* LaunchScreen.storyboard */,
@@ -244,6 +247,7 @@
 			files = (
 				9FE277C0208E1F34008ED6EE /* PlayerTableViewCell.swift in Sources */,
 				9F050D1B2088ED8B0099A266 /* PlayerVodTableViewController.swift in Sources */,
+				9FE277CA2090D1DD008ED6EE /* Vod.swift in Sources */,
 				9F050D192088ED3F0099A266 /* PlayerTableViewController.swift in Sources */,
 				9F050D1520864DB00099A266 /* TwitchWebService.swift in Sources */,
 				9FE277C2208E25BD008ED6EE /* Player.swift in Sources */,

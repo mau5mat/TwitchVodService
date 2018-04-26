@@ -8,13 +8,15 @@
 
 import UIKit
 
-class PlayerVodTableViewController: UITableViewController {
+class PlayerVodTableViewController: UITableViewController, TwitchWebServiceProtocol {
   
+  private var vods: [Vod]?
   var player: Player?
   private let webService = TwitchWebService()
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.webService.delegate = self
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -22,6 +24,27 @@ class PlayerVodTableViewController: UITableViewController {
     if let player = self.player {
       self.webService.requestPlayerVOD(withPlayer: player)
     }
+  }
+  
+  func twitchWebService(_ webService: TwitchWebService, recievedVODs VODs: [Vod]) {
+    print("Recieved VODs: \(VODs)")
+    self.vods = VODs
+    self.tableView.reloadData()
+  }
+  
+  override func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
+  }
+  
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return self.vods?.count ?? 0
+  }
+  
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = UITableViewCell()
+    cell.contentView.backgroundColor = .red
+    
+    return cell
   }
   
   static func push(from navigationController: UINavigationController, withPlayer player: Player) {
