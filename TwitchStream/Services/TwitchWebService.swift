@@ -48,10 +48,12 @@ class TwitchWebService {
               if let blobID = dataVod["id"] as? String,
                 let blobUserID = dataVod["user_id"] as? String,
                 let blobThumb = dataVod["thumbnail_url"] as? String,
-                let blobURL = dataVod["url"] as? String
-                /* let blobViewCount = dataVod["view_count"] as? Int */ {
+                let blobURL = dataVod["url"] as? String,
+                let blobViewCount = dataVod["view_count"] as? Int,
+                let blobTitle = dataVod["title"] as? String {
+              
  
-                let vodObj = Vod(id: blobID, userID: blobUserID, thumbNailURL: blobThumb, url: blobURL, viewCount: "420")
+                let vodObj = Vod(id: blobID, userID: blobUserID, thumbNailURL: blobThumb, url: blobURL, viewCount: blobViewCount, title: blobTitle)
                 
                 vods.append(vodObj)
                 // make Vod object with the above variables and then add object to vods[]

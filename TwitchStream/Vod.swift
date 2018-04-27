@@ -14,13 +14,15 @@ struct Vod {
   let userID: String
   let thumbNailURL: String
   let url: String
-  let viewCount: String
+  let viewCount: Int
+  let title: String
   
-  init(id:String, userID: String, thumbNailURL: String, url: String, viewCount: String) {
+  init(id:String, userID: String, thumbNailURL: String, url: String, viewCount: Int, title: String) {
     self.id = id
     self.userID = userID
     self.thumbNailURL = thumbNailURL
     self.url = url
     self.viewCount = viewCount
+    self.title = title
   }
 }

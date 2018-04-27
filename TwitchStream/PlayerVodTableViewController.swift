@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PlayerVodTableViewController: UITableViewController, TwitchWebServiceProtocol {
+  
   
   private var vods: [Vod]?
   var player: Player?
@@ -41,8 +43,12 @@ class PlayerVodTableViewController: UITableViewController, TwitchWebServiceProto
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell()
-    cell.contentView.backgroundColor = .red
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerVodTableCell", for: indexPath) as! PlayerVodTableViewCell
+    if let vod = self.vods?[indexPath.row] {
+      cell.set(vod: vod)
+    }
+    
     
     return cell
   }
