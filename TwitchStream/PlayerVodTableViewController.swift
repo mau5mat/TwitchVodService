@@ -34,6 +34,12 @@ class PlayerVodTableViewController: UITableViewController, TwitchWebServiceProto
     self.tableView.reloadData()
   }
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if let vod = vods?[indexPath.row] {
+      PlayerVodWebViewController.push(from: self.navigationController, withVod: vod)
+    }
+  }
+  
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
@@ -53,7 +59,8 @@ class PlayerVodTableViewController: UITableViewController, TwitchWebServiceProto
     return cell
   }
   
-  static func push(from navigationController: UINavigationController, withPlayer player: Player) {
+  
+    static func push(from navigationController: UINavigationController, withPlayer player: Player) {
     
     if let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PlayerVodTableViewController") as? PlayerVodTableViewController {
       viewController.player = player

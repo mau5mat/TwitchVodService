@@ -188,6 +188,40 @@
             </objects>
             <point key="canvasLocation" x="2948" y="31.934032983508249"/>
         </scene>
+        <!--Player Vod Web View Controller-->
+        <scene sceneID="RKl-I3-kNV">
+            <objects>
+                <viewController storyboardIdentifier="PlayerVodWebViewController" id="tEz-mT-YYm" customClass="PlayerVodWebViewController" customModule="TwitchStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E58-zK-KE1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzA-oH-dhT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kzA-oH-dhT" firstAttribute="top" secondItem="8Jd-bt-dDt" secondAttribute="top" id="GPr-rZ-aXD"/>
+                            <constraint firstItem="kzA-oH-dhT" firstAttribute="leading" secondItem="8Jd-bt-dDt" secondAttribute="leading" id="Xbd-DO-XMa"/>
+                            <constraint firstItem="kzA-oH-dhT" firstAttribute="trailing" secondItem="8Jd-bt-dDt" secondAttribute="trailing" id="eP5-Qp-Kxp"/>
+                            <constraint firstItem="kzA-oH-dhT" firstAttribute="bottom" secondItem="8Jd-bt-dDt" secondAttribute="bottom" id="nlA-xU-PwX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Jd-bt-dDt"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="kzA-oH-dhT" id="mBy-P7-cWN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9B-rY-7CC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3930.4000000000001" y="31.934032983508249"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="9y4-FQ-Nol">
             <objects>
