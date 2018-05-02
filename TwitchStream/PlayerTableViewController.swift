@@ -26,6 +26,7 @@ class PlayerTableViewController: UITableViewController {
     }
   }
   
+  
   private func loadPlayers() {
     
     // Loading the flag images
@@ -35,15 +36,34 @@ class PlayerTableViewController: UITableViewController {
     let flag4 = UIImage(named: "koreanFlag")
     let flag5 = UIImage(named: "philipinoFlag")
     
-    let player1 = Player(flag: flag4, name: "Devil Piggy Jin", twitch: "https://www.twitch.tv/sslaeppa", userID: "40728579")
-    let player2 = Player(flag: flag2, name: "Cyrox", twitch: "https://www.twitch.tv/cyrox", userID: "504840")
-    let player3 = Player(flag: flag4, name: "Qudans", twitch: "https://www.twitch.tv/qudans1987", userID: "129671338")
-    let player4 = Player(flag: flag4, name: "tkfightspirit", twitch: "https://www.twitch.tv/tkfightspirit", userID: "151547196")
-    let player5 = Player(flag: flag1, name: "MrKhan", twitch: "https://www.twitch.tv/mrkhan_", userID: "171707568")
-    let player6 = Player(flag: flag5!, name: "El", twitch: "https://www.twitch.tv/dvj_el", userID: "154106905")
-    let player7 = Player(flag: flag3!, name: "LegendaryMihawk", twitch: "https://www.twitch.tv/legendarymihawk", userID: "55932070")
-    let player8 = Player(flag: flag4, name: "DDUNGNYANG", twitch: "https://www.twitch.tv/dingerchung", userID: "66308786")
-    let player9 = Player(flag: flag1, name: "m5m", twitch: "https://www.twitch.tv/mau5mat", userID: "27524020")
+    let kazuyaSprite1 = UIImage(named: "kazuyaLeftLeg")
+    let kazuyaSprite2 = UIImage(named: "kazuyaNeutral")
+    let kazuyaSprite3 = UIImage(named: "kazuyaRightLeg")
+    let kazuyaSpriteArray = [kazuyaSprite1, kazuyaSprite2, kazuyaSprite3, kazuyaSprite2]
+    let kazuyaSpriteAnimated = UIImage.animatedImage(with: kazuyaSpriteArray as! [UIImage], duration: 1)
+    
+    let heihachiSprite1 = UIImage(named: "heihachiLeftLeg")
+    let heihachiSprite2 = UIImage(named: "heihachiNeutral")
+    let heihachiSprite3 = UIImage(named: "heihachiRightLeg")
+    let heihachiSpriteArray = [heihachiSprite1, heihachiSprite2, heihachiSprite3, heihachiSprite2]
+    let heihachiSpriteAnimated = UIImage.animatedImage(with: heihachiSpriteArray as! [UIImage], duration: 1)
+    
+    let devilSprite1 = UIImage(named: "devilLeftLeg")
+    let devilSprite2 = UIImage(named: "devilNeutral")
+    let devilSprite3 = UIImage(named: "devilRightLeg")
+    let devilSpriteArray = [devilSprite1, devilSprite2, devilSprite3, devilSprite2]
+    let devilSpriteAnimated = UIImage.animatedImage(with: devilSpriteArray as! [UIImage], duration: 1)
+    
+    
+    let player1 = Player(flag: flag4, sprite: kazuyaSpriteAnimated, name: "Devil Piggy Jin", twitch: "https://www.twitch.tv/sslaeppa", userID: "40728579")
+    let player2 = Player(flag: flag2, sprite: kazuyaSpriteAnimated, name: "Cyrox", twitch: "https://www.twitch.tv/cyrox", userID: "504840")
+    let player3 = Player(flag: flag4, sprite: devilSpriteAnimated, name: "Qudans", twitch: "https://www.twitch.tv/qudans1987", userID: "129671338")
+    let player4 = Player(flag: flag4, sprite: kazuyaSpriteAnimated, name: "tkfightspirit", twitch: "https://www.twitch.tv/tkfightspirit", userID: "151547196")
+    let player5 = Player(flag: flag1, sprite: kazuyaSpriteAnimated, name: "MrKhan", twitch: "https://www.twitch.tv/mrkhan_", userID: "171707568")
+    let player6 = Player(flag: flag5, sprite: devilSpriteAnimated, name: "El", twitch: "https://www.twitch.tv/dvj_el", userID: "154106905")
+    let player7 = Player(flag: flag3, sprite: devilSpriteAnimated, name: "LegendaryMihawk", twitch: "https://www.twitch.tv/legendarymihawk", userID: "55932070")
+    let player8 = Player(flag: flag4, sprite: heihachiSpriteAnimated, name: "DDUNGNYANG", twitch: "https://www.twitch.tv/dingerchung", userID: "66308786")
+    let player9 = Player(flag: flag1, sprite: heihachiSpriteAnimated, name: "m5m", twitch: "https://www.twitch.tv/mau5mat", userID: "27524020")
     
     players += [player1, player2, player3, player4, player5, player6, player7, player8, player9]
   }

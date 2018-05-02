@@ -16,6 +16,10 @@
 		9F050D192088ED3F0099A266 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F050D182088ED3F0099A266 /* PlayerTableViewController.swift */; };
 		9F050D1B2088ED8B0099A266 /* PlayerVodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F050D1A2088ED8B0099A266 /* PlayerVodTableViewController.swift */; };
 		9F2596AB2097299D008E0F13 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F2596AA2097299D008E0F13 /* WebKit.framework */; };
+		9F2596AD2099ECAE008E0F13 /* tekkenFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F2596AC2099ECAE008E0F13 /* tekkenFont.ttf */; };
+		9F2596B12099FBC7008E0F13 /* Munro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F2596B02099FBC7008E0F13 /* Munro.ttf */; };
+		9F2596B32099FBCF008E0F13 /* MunroNarrow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F2596B22099FBCE008E0F13 /* MunroNarrow.ttf */; };
+		9F2596B52099FBD5008E0F13 /* MunroSmall.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F2596B42099FBD5008E0F13 /* MunroSmall.ttf */; };
 		9FE277BE2089F36B008ED6EE /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE277BD2089F36B008ED6EE /* SplashViewController.swift */; };
 		9FE277C0208E1F34008ED6EE /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE277BF208E1F34008ED6EE /* PlayerTableViewCell.swift */; };
 		9FE277C2208E25BD008ED6EE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE277C1208E25BD008ED6EE /* Player.swift */; };
@@ -40,6 +44,10 @@
 		9F050D182088ED3F0099A266 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
 		9F050D1A2088ED8B0099A266 /* PlayerVodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerVodTableViewController.swift; sourceTree = "<group>"; };
 		9F2596AA2097299D008E0F13 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		9F2596AC2099ECAE008E0F13 /* tekkenFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tekkenFont.ttf; path = ../../../../tekkenFont.ttf; sourceTree = "<group>"; };
+		9F2596B02099FBC7008E0F13 /* Munro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Munro.ttf; path = ../../../../munro/Munro.ttf; sourceTree = "<group>"; };
+		9F2596B22099FBCE008E0F13 /* MunroNarrow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MunroNarrow.ttf; path = ../../../../munro/MunroNarrow.ttf; sourceTree = "<group>"; };
+		9F2596B42099FBD5008E0F13 /* MunroSmall.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MunroSmall.ttf; path = ../../../../munro/MunroSmall.ttf; sourceTree = "<group>"; };
 		9FE277BD2089F36B008ED6EE /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		9FE277BF208E1F34008ED6EE /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		9FE277C1208E25BD008ED6EE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -111,6 +119,10 @@
 				9FE277CB209328C9008ED6EE /* PlayerVodTableViewCell.swift */,
 				9F050D1A2088ED8B0099A266 /* PlayerVodTableViewController.swift */,
 				9FE277CD20971ADD008ED6EE /* PlayerVodWebViewController.swift */,
+				9F2596AC2099ECAE008E0F13 /* tekkenFont.ttf */,
+				9F2596B02099FBC7008E0F13 /* Munro.ttf */,
+				9F2596B22099FBCE008E0F13 /* MunroNarrow.ttf */,
+				9F2596B42099FBD5008E0F13 /* MunroSmall.ttf */,
 				9F050D0520864CB20099A266 /* Main.storyboard */,
 				9F050D0820864CB40099A266 /* Assets.xcassets */,
 				9F050D0A20864CB40099A266 /* LaunchScreen.storyboard */,
@@ -189,8 +201,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F050D0C20864CB40099A266 /* LaunchScreen.storyboard in Resources */,
+				9F2596B32099FBCF008E0F13 /* MunroNarrow.ttf in Resources */,
+				9F2596B52099FBD5008E0F13 /* MunroSmall.ttf in Resources */,
 				9F050D0920864CB40099A266 /* Assets.xcassets in Resources */,
 				9F050D0720864CB20099A266 /* Main.storyboard in Resources */,
+				9F2596AD2099ECAE008E0F13 /* tekkenFont.ttf in Resources */,
+				9F2596B12099FBC7008E0F13 /* Munro.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

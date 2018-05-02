@@ -6,9 +6,22 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Munro.ttf">
+            <string>Munro</string>
+        </array>
+        <array key="MunroSmall.ttf">
+            <string>MunroSmall</string>
+        </array>
+        <array key="tekkenFont.ttf">
+            <string>tekken62</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -19,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90u-wJ-T7E">
-                                <rect key="frame" x="16" y="103.5" width="342" height="480"/>
+                                <rect key="frame" x="16" y="107" width="342" height="474"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doryaSplash" translatesAutoresizingMaskIntoConstraints="NO" id="Ncd-sJ-MWt">
                                         <rect key="frame" x="0.0" y="0.0" width="342" height="400"/>
@@ -28,22 +41,15 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="2Hj-iR-3hl" customClass="LoadingControl" customModule="TwitchStream" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="440" width="342" height="40"/>
+                                        <rect key="frame" x="0.0" y="434" width="342" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="pFy-k6-hDb"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agT-SI-BPv">
-                                        <rect key="frame" x="124" y="408" width="94" height="24"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="LOADING . . .">
-                                                <attributes>
-                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <font key="NSFont" size="18" name="MarkerFelt-Wide"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOADING . . ." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agT-SI-BPv">
+                                        <rect key="frame" x="89.5" y="408" width="163.5" height="18"/>
+                                        <fontDescription key="fontDescription" name="tekken62" family="tekken 6 2" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -85,7 +91,7 @@
         <scene sceneID="cmN-HG-NXV">
             <objects>
                 <tableViewController storyboardIdentifier="PlayerTableViewController" id="APx-rW-sYa" customClass="PlayerTableViewController" customModule="TwitchStream" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="17I-tx-1RZ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="17I-tx-1RZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,31 +100,73 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SJM-tO-68a" id="ty0-T1-4nh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="1Ok-eX-H9h">
-                                            <rect key="frame" x="0.0" y="0.0" width="97" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stream Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VU-hQ-ijT">
+                                            <rect key="frame" x="67.5" y="10" width="126" height="22"/>
+                                            <fontDescription key="fontDescription" name="Munro" family="Munro" pointSize="23"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="streamTwitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvR-AM-9fR">
+                                            <rect key="frame" x="67.5" y="36" width="72.5" height="13.5"/>
+                                            <fontDescription key="fontDescription" name="MunroSmall" family="Munro Small" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="nNi-om-KSG">
+                                            <rect key="frame" x="16" y="8" width="43.5" height="43.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="nNi-om-KSG" secondAttribute="height" multiplier="1:1" id="Kg3-uu-b7Q"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="streamName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VU-hQ-ijT">
-                                            <rect key="frame" x="105" y="11" width="254" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="streamTwitch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvR-AM-9fR">
-                                            <rect key="frame" x="105" y="38" width="254" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Klu-EI-UbE">
+                                            <rect key="frame" x="16" y="59" width="343" height="1"/>
+                                            <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="P5B-gW-wei"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mjj-bO-ekO">
+                                            <rect key="frame" x="198" y="12" width="25.5" height="16"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ukFlag" translatesAutoresizingMaskIntoConstraints="NO" id="1Ok-eX-H9h">
+                                                    <rect key="frame" x="0.0" y="0.0" width="25.5" height="16"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="16" id="2uH-KJ-UaO"/>
+                                                <constraint firstItem="1Ok-eX-H9h" firstAttribute="leading" secondItem="Mjj-bO-ekO" secondAttribute="leading" id="B8x-O5-ghy"/>
+                                                <constraint firstAttribute="bottom" secondItem="1Ok-eX-H9h" secondAttribute="bottom" id="MV1-FG-whS"/>
+                                                <constraint firstAttribute="width" secondItem="Mjj-bO-ekO" secondAttribute="height" multiplier="760:480" id="WGa-6g-gGx"/>
+                                                <constraint firstAttribute="trailing" secondItem="1Ok-eX-H9h" secondAttribute="trailing" id="XtL-xx-mYO"/>
+                                                <constraint firstItem="1Ok-eX-H9h" firstAttribute="top" secondItem="Mjj-bO-ekO" secondAttribute="top" id="fMW-TD-3Rh"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="nNi-om-KSG" firstAttribute="top" secondItem="ty0-T1-4nh" secondAttribute="top" constant="8" id="1h3-gJ-50x"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Mjj-bO-ekO" secondAttribute="trailing" constant="16" id="26y-Jr-bQa"/>
+                                        <constraint firstAttribute="trailing" secondItem="Klu-EI-UbE" secondAttribute="trailing" constant="16" id="5gg-u9-h7A"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mvR-AM-9fR" secondAttribute="trailing" constant="16" id="Ahh-wC-awp"/>
+                                        <constraint firstItem="mvR-AM-9fR" firstAttribute="leading" secondItem="nNi-om-KSG" secondAttribute="trailing" constant="8" id="Awz-cz-qZ4"/>
+                                        <constraint firstItem="mvR-AM-9fR" firstAttribute="top" secondItem="6VU-hQ-ijT" secondAttribute="bottom" constant="4" id="GgQ-Ad-gtd"/>
+                                        <constraint firstItem="Mjj-bO-ekO" firstAttribute="centerY" secondItem="6VU-hQ-ijT" secondAttribute="centerY" constant="-1" id="Qbo-hX-cIn"/>
+                                        <constraint firstItem="Mjj-bO-ekO" firstAttribute="leading" secondItem="6VU-hQ-ijT" secondAttribute="trailing" constant="4" id="RxP-JK-pm1"/>
+                                        <constraint firstAttribute="bottom" secondItem="Klu-EI-UbE" secondAttribute="bottom" id="U7a-pl-nig"/>
+                                        <constraint firstItem="Klu-EI-UbE" firstAttribute="leading" secondItem="ty0-T1-4nh" secondAttribute="leading" constant="16" id="cyB-s6-IFr"/>
+                                        <constraint firstItem="6VU-hQ-ijT" firstAttribute="top" secondItem="nNi-om-KSG" secondAttribute="top" constant="2" id="j34-cj-bsS"/>
+                                        <constraint firstItem="6VU-hQ-ijT" firstAttribute="leading" secondItem="nNi-om-KSG" secondAttribute="trailing" constant="8" id="kmP-U7-V2R"/>
+                                        <constraint firstItem="nNi-om-KSG" firstAttribute="leading" secondItem="ty0-T1-4nh" secondAttribute="leading" constant="16" id="nkK-j6-v5p"/>
+                                        <constraint firstAttribute="bottom" secondItem="nNi-om-KSG" secondAttribute="bottom" constant="8" id="znZ-pY-uY3"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="characterSprite" destination="nNi-om-KSG" id="Hru-lJ-v3r"/>
                                     <outlet property="countryFlag" destination="1Ok-eX-H9h" id="5WD-aM-Dzh"/>
+                                    <outlet property="countryFlagContainerView" destination="Mjj-bO-ekO" id="Uou-yG-zxV"/>
                                     <outlet property="streamName" destination="6VU-hQ-ijT" id="6rN-IR-JVF"/>
                                     <outlet property="streamTwitch" destination="mvR-AM-9fR" id="2Ra-Gw-PXU"/>
                                 </connections>
@@ -151,21 +199,21 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="YmL-g6-jqO">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="YmL-g6-jqO">
                                             <rect key="frame" x="0.0" y="0.0" width="92" height="70"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="vodTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztj-aG-H6Q">
-                                            <rect key="frame" x="100" y="5" width="259" height="19"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="vodViewCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS7-Ql-L39">
+                                            <rect key="frame" x="100" y="38" width="259" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="MunroSmall" family="Munro Small" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="vodViewCount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XS7-Ql-L39">
-                                            <rect key="frame" x="100" y="28" width="259" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="vodTitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztj-aG-H6Q">
+                                            <rect key="frame" x="100" y="11" width="259" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Munro" family="Munro" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -244,5 +292,6 @@
     <resources>
         <image name="defaultPhoto" width="320" height="320"/>
         <image name="doryaSplash" width="450" height="600"/>
+        <image name="ukFlag" width="380" height="200"/>
     </resources>
 </document>
